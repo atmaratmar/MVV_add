@@ -1,0 +1,40 @@
+﻿@model MVD_add.Models.hello
+
+@{
+    ViewData["Title"] = "Index1";
+}
+
+<h2>Index1</h2>
+
+<div>
+    <h4>hello</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.helloo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.helloo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MyProperty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MyProperty)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+<div>
+    <form asp-controller="AddNumbers" asp-action="Index1" method="get">
+
+        <input id="a" name="a" />
+        <input id="b" name="b" />
+        <input type="submit" value="ADD" />
+      
+    </form>
+</div>
+
